@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Facebook2.Models.comments>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Publication_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Usuario_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Publication)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Hour)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Publication_id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Usuario_id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Publication)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Hour)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Comments_id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Comments_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Comments_id })
+        </td>
+    </tr>
+}
+
+</table>

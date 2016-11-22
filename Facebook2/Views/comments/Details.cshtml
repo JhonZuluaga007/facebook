@@ -1,0 +1,50 @@
+﻿@model Facebook2.Models.comments
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>comments</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Publication_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Publication_id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usuario_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usuario_id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Publication)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Publication)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Hour)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hour)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Comments_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
